@@ -1,0 +1,32 @@
+@import '../../../assets/styles/generics.scss';
+.c-nav{
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    .menu-items{
+        li {
+            margin-right: 30px;
+            a{
+                position: relative;
+                &:hover{
+
+                    &:after{
+                        content: "●";
+                        position: absolute;
+                        bottom: -15px;
+                        right: 40%;
+                        color: $purple;
+                    }
+
+                    &:active{
+                        content: "●";
+                        position: absolute;
+                        bottom: -15px;
+                        right: 40%;
+                        color: $purple;
+                    }
+                }
+            }
+        }
+    }
+}
