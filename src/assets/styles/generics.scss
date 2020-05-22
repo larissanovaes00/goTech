@@ -1,18 +1,18 @@
 /************************** COLORS **************************/
-$blue-bight: #0000FF;
-$blue-violet: #6362D7;
-$purple: #856DD7;
-$pink: #FF8FE2;
+$blue-bight: #0000ff;
+$blue-violet: #6362d7;
+$purple: #856dd7;
+$pink: #ff8fe2;
 $black: #222222;
-$grey-dark:#555555;
+$grey-dark: #555555;
 $grey-medium: #777777;
-$purple-light: #D1C4F8;
-$white: #FFFFFF;
+$purple-light: #d1c4f8;
+$white: #ffffff;
 
 /************************** FONT-FAMILY **************************/
-$font-regular: 'Poppins-Regular';
-$font-semibold: 'Poppins-SemiBold';
-$font-medium: 'Poppins-Medium';
+$font-regular: "Poppins-Regular";
+$font-semibold: "Poppins-SemiBold";
+$font-medium: "Poppins-Medium";
 
 @font-face {
   font-family: "Poppins-SemiBold";
@@ -36,152 +36,208 @@ $font-medium: 'Poppins-Medium';
 }
 
 /************************** FONT-SIZE **************************/
-.semibold-46{
-    font-family: 'Poppins-SemiBold';
-    font-size: 46px;
-    line-height: 58px;
-    font-weight: 600;
-    color: $black;
+.semibold-46 {
+  font-family: "Poppins-SemiBold";
+  font-size: 46px;
+  line-height: 58px;
+  font-weight: 600;
+  color: $black;
 }
 
-.semibold-36{
-    font-family: 'Poppins-SemiBold';
-    font-size: 36px;
-    line-height: 46px;
-    font-weight: 600;
-    color: $black;
+.semibold-36 {
+  font-family: "Poppins-SemiBold";
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 600;
+  color: $black;
 }
 
-.medium-15{
-    font-family: 'Poppins-Medium';
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 500;
-    color: $white;
+.medium-15 {
+  font-family: "Poppins-Medium";
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 500;
+  // color: $white;
 }
 
-.regular-46{
-    font-family: 'Poppins-Regular';
-    font-size: 46px;
-    line-height: 58px;
-    font-weight: 400;
-    color: $black;
+.regular-46 {
+  font-family: "Poppins-Regular";
+  font-size: 46px;
+  line-height: 58px;
+  font-weight: 400;
+  color: $black;
 }
 
-.regular-36{
-    font-family: 'Poppins-Regular';
-    font-size: 36px;
-    line-height: 46px;
-    font-weight: 400;
-    color: $black;
+.regular-36 {
+  font-family: "Poppins-Regular";
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: 400;
+  color: $black;
 }
 
-.regular-15{
-    font-family: 'Poppins-Regular';
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 400;
-    color: $grey-dark;
+.regular-15 {
+  font-family: "Poppins-Regular";
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  color: $grey-dark;
 }
 
-.regular-14{
-    font-family: 'Poppins-Regular';
-    font-size: 14px;
-    line-height: 25px;
-    font-weight: 400;
-    color: $grey-dark;
+.regular-14 {
+  font-family: "Poppins-Regular";
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  color: $grey-dark;
 }
 
-.regular-13{
-    font-family: 'Poppins-Regular';
-    font-size: 13px;
-    line-height: 23px;
-    font-weight: 400;
-    color: $grey-medium;
+.regular-13 {
+  font-family: "Poppins-Regular";
+  font-size: 13px;
+  line-height: 23px;
+  font-weight: 400;
+  color: $grey-medium;
 }
-
 
 /************************** FONT-SIZE **************************/
-a{
+a {
+  transition: 0.5s;
+
+  &:hover {
+    color: $purple;
+  }
+
+  &:active {
+    color: $purple;
+  }
+}
+
+input {
+  border: solid 1px $purple-light;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 15px;
+  padding-left: 15px;
+  width: 250px;
+  margin-right: 35px;
+  padding-top: 3px;
+
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $purple-light;
+    opacity: 1; /* Firefox */
+    font-family: "Poppins-Regular";
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $purple-light;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $purple-light;
+  }
+
+  &:focus {
+    border: solid 1px $purple;
+    outline: none;
     transition: 0.5s;
 
-    &:hover{
-        color: $purple;
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $purple;
+      opacity: 1; /* Firefox */
+      font-family: "Poppins-Regular";
     }
 
-    &:active{
-        color: $purple;
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $purple;
     }
 
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: $purple;
+    }
+  }
 }
 
-input{
-    border: solid 1px $purple-light;
-    height: 40px;
-    border-radius: 4px;
-    font-size: 15px;
-    padding-left: 15px;
-    width: 250px;
-    margin-right: 35px;
-    padding-top: 3px;
+.btn-call-to-action {
+  border: none;
+  font-family: "Poppins-Regular";
+  color: $white;
+  border-radius: 4px;
+  font-size: 14px;
+  /* width: 150px; */
+  padding: 0 30px;
+  background-image: linear-gradient(
+    70deg,
+    $blue-violet 5%,
+    $pink 50%,
+    $pink 50%
+  );
+  transition: 0.5s;
+  background-size: 250% auto;
 
-    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        color: $purple-light;
-        opacity: 1; /* Firefox */
-        font-family: 'Poppins-Regular';
-      }
-      
-      :-ms-input-placeholder { /* Internet Explorer 10-11 */
-        color: $purple-light;
-      }
-      
-      ::-ms-input-placeholder { /* Microsoft Edge */
-        color: $purple-light;
-    }
-
-    &:focus{
-        border: solid 1px $purple;
-        outline: none;
-        transition: 0.5s;
-
-        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: $purple;
-            opacity: 1; /* Firefox */
-            font-family: 'Poppins-Regular';
-          }
-          
-          :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: $purple;
-          }
-          
-          ::-ms-input-placeholder { /* Microsoft Edge */
-            color: $purple;
-        }
-
-    }
+  &:hover {
+    background-position: right center;
+  }
 }
 
-.btn-call-to-action{
-    border: none;
-    font-family: 'Poppins-Regular';
-    color: $white;
-    border-radius: 4px;
-    font-size: 14px;
-    /* width: 150px; */
-    padding: 0 30px;
-    background-image: linear-gradient(70deg, $blue-violet 5%, $pink 60%, $pink 100%);
-    transition: 0.5s;
-    background-size: 200% auto;
+/************************** FONT-SIZE **************************/
 
-    &:hover{
-        background-position: right center;
+.m-30 {
+    &.top {
+        margin-top: 30px;
+    }
+
+    &.bottom {
+        margin-bottom: 30px;
+    }
+
+    &.left {
+        margin-left: 30px;
+    }
+
+    &.right {
+        margin-right: 30px;
     }
 }
 
+.m-20 {
+    &.top {
+        margin-top: 20px;
+    }
 
+    &.bottom {
+        margin-bottom: 20px;
+    }
 
+    &.left {
+        margin-left: 20px;
+    }
 
+    &.right {
+        margin-right: 20px;
+    }
+}
 
+.m-10 {
+    &.top {
+        margin-top: 10px;
+    }
 
+    &.bottom {
+        margin-bottom: 10px;
+    }
 
+    &.left {
+        margin-left: 10px;
+    }
 
+    &.right {
+        margin-right: 10px;
+    }
+}

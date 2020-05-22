@@ -1,0 +1,62 @@
+@import '../../../assets/styles/generics.scss';
+
+.c-footer{
+    h3{
+        margin-bottom: 30px;
+    }
+
+    li{
+        margin-bottom: 20px;
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-content{
+        margin-top: 60px;
+    }
+
+    .social-media-icons{
+
+        a{
+            border-radius: 50px;
+            width: 40px;
+            height: 40px;
+            padding: 10px;
+            margin-right: 20px;
+            transition: 0.5s;
+            background-size: 200% auto;
+
+            &:hover{
+                background-position: right center;
+            }
+        }
+
+        .facebook{
+            background-image: linear-gradient(70deg, $blue-violet 5%, $pink 95%, $pink 100%);
+        }
+
+        .skype{
+            background-image: linear-gradient(70deg, #00B56C 5%, #9EE69D 95%, #9EE69D 100%);
+        }
+
+        .linkedin{
+            background-image: linear-gradient(70deg, #FF9AB6 5%, #F03295 95%, #F03295 100%);
+        }
+
+        .instagram{
+            background-image: linear-gradient(70deg, #F09376 5%, #F0DB79 95%, #F0DB79 100%);
+        }
+    }
+}
+
+.bottom-section{
+    background-image: url('../../../assets/img/bg-footer.svg');
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    background-color:$white;
+}
