@@ -1,0 +1,72 @@
+@import '../../../assets/styles/generics.scss';
+
+.c-header{
+    text-align: center;
+    .header-title{
+        text-align: center;
+        max-width: 650px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+}
+
+.section-contact{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url('../../../assets/img/bg-contact.svg');
+}
+
+.contact-form{
+    margin-top: 30px;
+    max-width: 770px;
+    display: flex;
+    flex-wrap: wrap;
+    background: $white;
+    border-radius: 4px;
+    padding: 45px 30px;
+    box-shadow: 0px 12px 14px 4px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.16);
+
+    label{
+        font-family: 'Poppins-Medium';
+        font-size: 20px;
+        // line-height: 24px;
+        color: $black;
+        &:focus{
+            color: $blue-violet;
+            outline: none;
+        }
+    }
+
+    input{
+        &::placeholder {
+            font-family: 'Poppins-Regular';
+            color: $purple-light;
+            font-size: 13px;
+        }
+    }
+
+    // input[type=text]:not(.browser-default){
+    //     border: none;
+    //     border-bottom: solid 1px $purple-light;
+
+    //     &:focus{
+    //         border-bottom: none;
+    //         box-shadow: 0 1px 0 0 $blue-violet;
+    //     }
+    // }
+
+    // input[type=text]:not(.browser-default):focus:not([readonly])+label{
+    //     color: $blue-violet;
+    // }
+
+    // input.valid[type=text]:not(.browser-default){
+    //     box-shadow: 0 1px 0 0 $blue-violet;
+    //     font-family: 'Poppins-Regular';
+    //     font-size: 13px;
+    //     color: $purple-light;
+    // }
+}

@@ -9,10 +9,30 @@
         margin-bottom: 20px;
     }
 
-    a{
-        display: flex;
-        align-items: center;
+    span{
+        position: relative;
+        transition: 0.4s;
+        cursor: pointer;
+
+        &:hover{
+            color: $purple;
+
+            &:after{
+                content: "●";
+                position: absolute;
+                bottom: -15px;
+                right: 40%;
+                color: $purple;
+            }
+
+            &:focus{
+                content: "●";
+                color: $purple;
+                outline: none;
+            }
+        }
     }
+
 
     .footer-content{
         margin-top: 60px;
