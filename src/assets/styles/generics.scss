@@ -45,6 +45,11 @@ $font-medium: "Poppins-Medium";
 	line-height: 58px;
 	font-weight: 600;
 	color: $black;
+
+	@media(max-width: 575px){
+		font-size: 2rem;
+		line-height: 1.39;
+	}
 }
 
 .semibold-36 {
@@ -53,6 +58,11 @@ $font-medium: "Poppins-Medium";
 	line-height: 46px;
 	font-weight: 600;
 	color: $black;
+
+	@media(max-width: 575px){
+		font-size: 26px;
+		line-height: 1.39;
+	}
 }
 
 .medium-15 {
@@ -68,6 +78,11 @@ $font-medium: "Poppins-Medium";
 	line-height: 58px;
 	font-weight: 400;
 	color: $black;
+
+	@media(max-width: 575px){
+		font-size: 2rem;
+		line-height: 1.39;
+	}
 }
 
 .regular-36 {
@@ -76,6 +91,11 @@ $font-medium: "Poppins-Medium";
 	line-height: 46px;
 	font-weight: 400;
 	color: $black;
+
+	@media(max-width: 575px){
+		font-size: 26px;
+		line-height: 1.39;
+	}
 }
 
 .regular-15 {
@@ -132,7 +152,8 @@ a{
         font-family: 'Poppins-Regular';
         font-size: 13px;
         color: $grey-light;
-        line-height: 21px;
+		line-height: 21px;
+		box-shadow: none;
         transition: 0.4s;
 
         &::placeholder{
@@ -203,6 +224,8 @@ a{
 			.dropdown-item{
 				padding: 15px;
 				cursor: pointer;
+				white-space: break-spaces;
+				line-height: 1.39;
 
 				&:focus{
 					background: $grey-super-light;
@@ -281,6 +304,10 @@ button{
 	&:hover {
 		background-position: right center;
 	}
+
+	@media(max-width: 575px){
+		width: 100%;
+	}
 }
 
 .button-outline{
@@ -292,6 +319,10 @@ button{
 	&:hover{
 		background: $blue-violet;
 		color: $white;
+	}
+
+	@media(max-width: 575px){
+		width: 100%;
 	}
 }
 
@@ -316,7 +347,25 @@ button{
 
     &.right {
         margin-right: 120px;
-    }
+	}
+
+	@media(max-width: 575px){
+		&.top {
+			margin-top: 70px;
+		}
+	
+		&.bottom {
+			margin-bottom: 70px;
+		}
+	
+		&.left {
+			margin-left: 70px;
+		}
+	
+		&.right {
+			margin-right: 70px;
+		}
+	}
 }
 
 .m-30 {
@@ -390,4 +439,58 @@ button{
     &.right {
         margin-right: 10px;
     }
+}
+
+@media(max-width: 1200px){
+	.m-md-30{
+		&.top {
+			margin-top: 30px;
+		}
+	
+		&.bottom {
+			margin-bottom: 30px;
+		}
+	
+		&.left {
+			margin-left: 30px;
+		}
+	
+		&.right {
+			margin-right: 30px;
+		}
+	}	
+}
+
+@media(max-width: 575px){
+	.m-mobile-reset{
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+		margin-top: 0px !important;
+		margin-bottom: 0px !important;
+	}
+
+	.p-mobile-reset{
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		padding-top: 0px !important;
+		padding-bottom: 0px !important;
+	}
+
+	.m-mobile-10{
+		&.top {
+			margin-top: 10px;
+		}
+	
+		&.bottom {
+			margin-bottom: 10px;
+		}
+	
+		&.left {
+			margin-left: 10px;
+		}
+	
+		&.right {
+			margin-right: 10px;
+		}
+	}
 }
