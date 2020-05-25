@@ -2,13 +2,27 @@
 .c-nav{
     padding-top: 25px;
     padding-bottom: 25px;
+    background: transparent;
+    box-shadow: none;
+
+    .logo-img{
+        transition: 0.5s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
 
     .menu-items{
         li {
-            margin-right: 30px;
+            margin-right: 1.5rem;
+
             a{
                 position: relative;
+                color: $black;
+
                 &:hover{
+                    background-color: transparent;
+                    color: $purple;
 
                     &:after{
                         content: "●";

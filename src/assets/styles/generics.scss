@@ -3,11 +3,13 @@ $blue-bight: #0000ff;
 $blue-violet: #6362d7;
 $purple: #856dd7;
 $purple-bright: #9D60EB;
+$purple-light: #d1c4f8;
 $pink: #ff8fe2;
 $black: #222222;
 $grey-dark: #555555;
 $grey-medium: #777777;
-$purple-light: #d1c4f8;
+$grey-light: #C2C2C2;
+$grey-super-light: #F8F9FA;
 $white: #ffffff;
 
 /************************** FONT-FAMILY **************************/
@@ -100,12 +102,9 @@ $font-medium: "Poppins-Medium";
 	color: $grey-medium;
 }
 
-
 .text-center{
 	text-align: center;
 }
-
-
 
 /************************** LINKS **************************/
 a{
@@ -120,83 +119,148 @@ a{
 	}
 }
 
-/************************** INPUTS **************************/
-input {
-	border: solid 1px $purple-light;
-	height: 40px;
-	border-radius: 4px;
-	font-size: 15px;
-	padding-left: 15px;
-	width: 250px;
-	margin-right: 35px;
-	padding-top: 3px;
-	transition: 0.4s;
+/************************** FORM **************************/
+.form{
+	input, textarea{
+        width: 100%;
+        border: none;
+		border-bottom: solid 1px $grey-light;
+		border-radius: 0;
+        padding-bottom: 15px;
+		padding-top: 15px;
+		padding-left: 0px;
+        font-family: 'Poppins-Regular';
+        font-size: 13px;
+        color: $grey-light;
+        line-height: 21px;
+        transition: 0.4s;
 
-	&::placeholder {
-		color: $purple-light;
-		opacity: 1;
-		font-family: "Poppins-Regular";
-		transition: 0.4s;
+        &::placeholder{
+            transition: 0.4s;
+            color: $grey-light;
+        }
+        
+        &:focus{
+            border-bottom: solid 1px $blue-violet;
+            color: $blue-violet;
+            
+            &::placeholder{
+                color: $blue-violet;
+            }
+        }
+    }
+
+    label{
+        color: $black;
+        font-family: "Poppins-Medium";
+        font-size: 14px;
+        line-height: 23px;
+        
+        &:focus{
+            color: $blue-violet;
+        }
 	}
 
-	&:focus {
-		border: solid 1px $purple;
-		outline: none;
-		
-		&::placeholder {
-			color: $purple;
-			opacity: 1;
-			font-family: "Poppins-Regular";
+	/************************** DROPDOWN **************************/
+	.dropdown{
+		border-bottom: solid 1px $grey-light;
+		padding-bottom: 15px;
+		padding-top: 15px;
+		cursor: pointer;
+
+		.dropdown-toggle{
+			color: $grey-light;
+			font-family: 'Poppins-Regular';
+			font-size: 13px;
+
+			&:after{
+				border-top: 7px solid;
+				border-right: 7px solid transparent;
+				border-bottom: 0;
+				border-left: 7px solid transparent;
+				position: absolute;
+				bottom: 17px;
+				right: 0px;
+			}
+
+			&:focus{
+				color: $blue-violet;
+			}
+		}
+
+		.dropdown-menu.show {
+			width: 100%;
+			font-size: 13px;
+			font-family: 'Poppins-Regular';
+			margin: 0;
+			padding: 0;
+			border: solid 1px $grey-light;
+
+			&:focus{
+				border: solid 1px $blue-violet;
+			}
+
+			.dropdown-item{
+				padding: 15px;
+				cursor: pointer;
+
+				&:focus{
+					background: $grey-super-light;
+					color: $blue-violet;
+				}
+
+				&:active{
+					background: $grey-super-light;
+					color: $blue-violet;
+				}
+
+				&:hover{
+					background: $grey-super-light;
+					color: $blue-violet;
+				}
+			}
 		}
 	}
 }
 
-input:not([type]), input[type=text]:not(.browser-default), 
-input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), 
-input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), 
-input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), 
-input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), 
-input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), 
-textarea.materialize-textarea{
-	font-family: 'Poppins-Regular' !important;
-	font-size: 13px;
-	color: $blue-violet;
-}
-
-input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), 
-input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), 
-input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), 
-input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), 
-input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), 
-input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), 
-textarea.materialize-textarea:focus:not([readonly]){
-	border: none;
-	border-bottom: solid 1px $purple-light;
-	box-shadow: 0 1px 0 0 $blue-violet;
-	font-family: 'Poppins-Regular';
-	font-size: 13px;
-	color: $purple-light;
-
-	&:focus{
-		border-bottom: none;
-		box-shadow: 0 1px 0 0 $blue-violet;
+/************************** SINGLE INPUT (search box) **************************/
+.c-input{
+	input {
+		border: solid 1px $purple-light;
+		height: 40px;
+		border-radius: 4px;
+		font-size: 15px;
+		padding-left: 15px;
+		width: 250px;
+		margin-right: 35px;
+		padding-bottom: 3px;
+		transition: 0.4s;
+	
+		&::placeholder {
+			color: $purple-light;
+			font-size: 12px;
+			opacity: 1;
+			font-family: "Poppins-Regular";
+			transition: 0.4s;
+		}
+	
+		&:focus {
+			border: solid 1px $purple;
+			outline: none;
+			
+			&::placeholder {
+				color: $purple;
+				opacity: 1;
+				font-family: "Poppins-Regular";
+			}
+		}
 	}
 }
-
-// input:not([type]).validate+label, input[type=text]:not(.browser-default).validate+label, 
-// input[type=password]:not(.browser-default).validate+label, input[type=email]:not(.browser-default).validate+label, 
-// input[type=url]:not(.browser-default).validate+label, input[type=time]:not(.browser-default).validate+label, 
-// input[type=date]:not(.browser-default).validate+label, input[type=datetime]:not(.browser-default).validate+label, 
-// input[type=datetime-local]:not(.browser-default).validate+label, input[type=tel]:not(.browser-default).validate+label, 
-// input[type=number]:not(.browser-default).validate+label, input[type=search]:not(.browser-default).validate+label, 
-// textarea.materialize-textarea.validate+label{
-// 	color: $blue-violet;
-// }
 
 /************************** BUTTON **************************/
 button{
 	font-family: 'Poppins-Regular';
-	font-size: 15px;
+	font-size: 14px;
 	width: 140px;
 	height: 40px;
 	border-radius: 4px;
@@ -230,10 +294,6 @@ button{
 		color: $white;
 	}
 }
-
-
-
-
 
 /************************** MARGIN / PADDING **************************/
 .margin-auto{
