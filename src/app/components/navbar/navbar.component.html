@@ -1,8 +1,14 @@
-<nav class="c-nav">
+
+<nav class="c-nav navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-            <img src="../../../assets/img/logo.svg" alt="logo">
-            <ul class="d-flex menu-items">
+        <div class="w-100 d-flex justify-content-between align-items-center m-md-30 bottom">
+            <div class="navbar-brand m-0" href="#"><img class="logo-img" src="../../../assets/img/logo.svg" alt="logo"></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse collapsing" id="navbarText">
+            <ul class="w-100 d-flex flex-wrap flex-lg-nowrap menu-items justify-content-center">
                 <li class="regular-14"><a href="#">Home</a></li>
                 <li class="regular-14"><a href="#">About</a></li>
                 <li class="regular-14"><a href="#">Portfolio</a></li>
@@ -10,11 +16,16 @@
                 <li class="regular-14"><a href="#">Career</a></li>
                 <li class="regular-14"><a href="#">Blog</a></li>
             </ul>
-            <div class="d-flex">
-                <input type="search" placeholder="Search Here" >
+            <div class="d-flex justify-content-center c-input">
+                <input class="d-none d-xl-flex" type="search" placeholder="Search Here">
                 <button class="btn-call-to-action">Contact Us</button>
             </div>
-            
         </div>
+
     </div>
 </nav>
+
+
+
+
+
